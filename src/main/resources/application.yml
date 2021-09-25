@@ -1,0 +1,7 @@
+restcountryapi:
+   access_key: f16479a027a8f0d6c8c1082aa65444c7
+   
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://dbuser:dbuser@ng-web-cluster.xbgxd.mongodb.net/playerdb?retryWrites=true&w=majority

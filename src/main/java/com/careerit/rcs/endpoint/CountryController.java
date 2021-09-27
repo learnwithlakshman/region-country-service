@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.careerit.rcs.domain.Country;
+import com.careerit.rcs.dto.RegionNamesDto;
 import com.careerit.rcs.service.CountryService;
 
 @RestController
@@ -19,7 +20,7 @@ public class CountryController {
 	private CountryService countryService;
 
 	@GetMapping("/regionnames")
-	public List<String> getRegionNames() {
+	public RegionNamesDto getRegionNames() {
 		return countryService.getRegionNames();
 	}
 

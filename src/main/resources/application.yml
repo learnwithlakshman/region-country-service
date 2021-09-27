@@ -5,3 +5,22 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://dbuser:dbuser@ng-web-cluster.xbgxd.mongodb.net/playerdb?retryWrites=true&w=majority
+
+server:  servlet:    context-path: /rcsapp
+    
+logging:  file:    name: log/application.log
+    
+
+management:
+ endpoints:
+   web:
+    exposure:
+      include: info,health
+ endpoint:
+   health:
+     show-details: always
+ health:
+   db: 
+    enabled: true
+   defaults:
+     enabled: true

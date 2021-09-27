@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.careerit.rcs.domain.Country;
+import com.careerit.rcs.dto.RegionNamesDto;
 import com.careerit.rcs.repo.CountryDao;
 
 @Service
@@ -14,7 +15,7 @@ public class CountryServiceImpl implements CountryService{
 	@Autowired
 	private CountryDao countryDao;
 	@Override
-	public List<String> getRegionNames() {
+	public RegionNamesDto getRegionNames() {
 		return countryDao.findRegionNames();
 	}
 
